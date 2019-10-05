@@ -23,8 +23,6 @@ public class Main2Activity extends AppCompatActivity {
         setTitle("CONFIRMATION");
         FileInputStream reader = null;
         String str = "";
-        String str1 = "";
-        int token1;
         int token;
         try {
             reader = openFileInput("data.txt");
@@ -33,9 +31,9 @@ public class Main2Activity extends AppCompatActivity {
             }
             reader.close();
             try {
-                String[] list = str.split("\n");
+                String[] list = str.split("_");
                 ((TextView) (findViewById(R.id.textView12))).setText(list[0]);
-                ((TextView) (findViewById(R.id.textView13))).setText(list[0]);
+                ((TextView) (findViewById(R.id.textView13))).setText(list[1]);
             } catch (Exception e) {
                 Log.d("error", "onCreate: subject not found...");
             }
