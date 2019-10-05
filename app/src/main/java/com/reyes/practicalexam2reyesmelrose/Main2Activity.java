@@ -35,22 +35,6 @@ public class Main2Activity extends AppCompatActivity {
             try {
                 String[] list = str.split("\n");
                 ((TextView) (findViewById(R.id.textView12))).setText(list[0]);
-            } catch (Exception e) {
-                Log.d("error", "onCreate: subject not found...");
-            }
-        } catch (FileNotFoundException e) {
-            Log.d("error", "onCreate: file not foumd...");
-        } catch (IOException e) {
-            Log.d("error", "onCreate: IO error");
-        }
-        try {
-            reader = openFileInput("data.txt");
-            while ((token1 = reader.read()) != -1) {
-                str1 = str1 + (char)token1;
-            }
-            reader.close();
-            try {
-                String[] list = str.split("\n");
                 ((TextView) (findViewById(R.id.textView13))).setText(list[0]);
             } catch (Exception e) {
                 Log.d("error", "onCreate: subject not found...");

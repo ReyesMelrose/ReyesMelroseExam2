@@ -49,30 +49,30 @@ public class MainActivity extends AppCompatActivity {
         try {
                 writer = openFileOutput("data.txt", MODE_PRIVATE);
                 if (cb1.isChecked()) {
-                    writer.write(cbt1.getBytes());
+                    writer.write((cbt1 + "\n") .getBytes());
                 }
                 if (cb2.isChecked()) {
-                    writer.write(cbt2.getBytes());
+                    writer.write((cbt2 + "\n") .getBytes());
                 }
                 if (cb3.isChecked()) {
-                    writer.write(cbt3.getBytes());
+                    writer.write((cbt3 + "\n") .getBytes());
                 }
                 if (cb4.isChecked()) {
-                    writer.write(cbt4.getBytes());
+                    writer.write((cbt4 + "\n") .getBytes());
                 }
                 if (cb5.isChecked()) {
-                    writer.write(cbt5.getBytes());
+                    writer.write((cbt5 + "\n") .getBytes());
                 }
                 if (cb6.isChecked()) {
-                    writer.write(cbt6.getBytes());
+                    writer.write((cbt6 + "\n") .getBytes());
                 }
                 if (cb7.isChecked()) {
-                    writer.write(cbt7.getBytes());
+                    writer.write((cbt7 + "\n") .getBytes());
                 }
                 if (cb8.isChecked()) {
-                    writer.write(cbt8.getBytes());
+                    writer.write((cbt8 + "\n") .getBytes());
                 }
-            writer.write(input1.getBytes());
+            writer.write(("_" + (input1 + "\n")) .getBytes());
             } catch (FileNotFoundException e) {
                 Log.d("error", "writeData: File not found...");
             } catch (IOException e) {
